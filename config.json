@@ -1,53 +1,31 @@
 {
-    "inbounds": [],
-    "outbounds": [
-        {
-            "mux": {
-                "enabled": false
-            },
-            "protocol": "vless",
-            "settings": {
-                "vnext": [
-                    {
-                        "address": "fonts.googleapis.com",  
-                        "port": 443,                        
-                        "users": [
-                            {
-                                "encryption": "none",      
-                                "flow": "",                
-                                "id": "d2cb8181-233c-4d18-9972-8a1b04db1944",
-                                "level": 8                  
-                            }
-                        ]
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",                      
-                "security": "tls",                    
-                "tlsSettings": {
-                    "allowInsecure": true,             
-                    "serverName": "fonts.googleapis.com" 
-                },
-                "wsSettings": {
-                    "headers": {
-                        "Host": "zendanavepro-548991447850.europe-west1.run.app" 
-                    },
-                    "path": "/zendanave"               
-                }
-            },
-            "tag": "VLESS"                         
-        }
-    ],
-    "policy": {
-        "levels": {
-            "8": {
-                "connIdle": 300,                  
-                "downlinkOnly": 1,                
-                "handshake": 4,                    
-                "uplinkOnly": 1                    
-            }
-        }
-    }
+"inbounds": [
+{
+"port": 8080,
+"protocol": "vless",
+"settings": {
+"clients": [
+{
+"id": "d2cb8181-233c-4d18-9972-8a1b04db1944",
+"level": 0
+}
+],
+"decryption": "none"
+},
+"streamSettings": {
+"network": "ws",
+"wsSettings": {
+"path": "/zendanave"
+}
+}
+}
+],
+"outbounds": [
+{
+"protocol": "freedom",
+"settings": {}
+}
+]
 }
 
+    
