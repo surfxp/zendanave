@@ -1,52 +1,53 @@
 {
-		"inbounds": [],
-		"outbounds": [
-				{
-						"mux": {
-								"enabled": false
-						},
-						"protocol": "vless",
-						"settings": {
-								"vnext": [
-										{
-												"address": "fonts.googleapis.com",
-												"port": 443,
-												"users": [
-														{
-																"encryption": "none",
-																"flow": "",
-																"id": "d2cb8181-233c-4d18-9972-8a1b04db1944",
-																"level": 8
-														}
-												]
-										}
-								]
-						},
-						"streamSettings": {
-								"network": "ws",
-								"security": "tls",
-								"tlsSettings": {
-										"allowInsecure": true,
-										"serverName": "fonts.googleapis.com"
-								},
-								"wsSettings": {
-										"headers": {
-												"Host": "zendanavepro-548991447850.europe-west1.run.app"
-										},
-										"path": "/zendanave"
-								}
-						},
-						"tag": "VLESS"
-				}
-		],
-		"policy": {
-				"levels": {
-						"8": {
-								"connIdle": 300,
-								"downlinkOnly": 1,
-								"handshake": 4,
-								"uplinkOnly": 1
-						}
-				}
-		}
+    "inbounds": [],
+    "outbounds": [
+        {
+            "mux": {
+                "enabled": false
+            },
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "fonts.googleapis.com",  // Dirección del servidor
+                        "port": 443,                        // Puerto del servidor
+                        "users": [
+                            {
+                                "encryption": "none",      // Tipo de cifrado
+                                "flow": "",                 // Flujo (puede ser vacío si no se usa)
+                                "id": "d2cb8181-233c-4d18-9972-8a1b04db1944", // ID del usuario
+                                "level": 8                  // Nivel de acceso
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",                      // Tipo de red
+                "security": "tls",                    // Seguridad (TLS)
+                "tlsSettings": {
+                    "allowInsecure": true,             // Permitir conexiones inseguras
+                    "serverName": "fonts.googleapis.com" // Nombre del servidor para TLS
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "zendanavepro-548991447850.europe-west1.run.app" // Cabecera Host
+                    },
+                    "path": "/zendanave"               // Ruta para WebSocket
+                }
+            },
+            "tag": "VLESS"                          // Etiqueta para identificar esta salida
+        }
+    ],
+    "policy": {
+        "levels": {
+            "8": {
+                "connIdle": 300,                   // Tiempo de inactividad de conexión
+                "downlinkOnly": 1,                 // Solo bajada
+                "handshake": 4,                     // Tiempo de espera para el handshake
+                "uplinkOnly": 1                     // Solo subida
+            }
+        }
+    }
 }
+
