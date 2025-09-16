@@ -6,7 +6,7 @@
 "settings": {
 "clients": [
 {
-"id": "d2cb8181-233c-4d18-9972-8a1b04db1944",
+"id": "d2cb8181-233c-4d18-9972-8a1b04db1994",
 "level": 0
 }
 ],
@@ -15,7 +15,7 @@
 "streamSettings": {
 "network": "ws",
 "wsSettings": {
-"path": "/zendanave"
+"path": "/zendanave1"
 }
 }
 }
